@@ -94,6 +94,10 @@ Date:   Fri Jun 5 12:12:58 2026 +0300
 
 Signed commits matter because they cryptographically verify the identity of the author. THerefore, it is much harder to impersonate a trusted maintainer. As z-utils backdoor (March 2024) shows, if attaker can sucsessfully ippersonate and get acsess to some utisl sorce code, it can compromise the whole internet onfratructure.
 
+Task 2
+
+This task does not require any notes here, but I'll ad this text to fit the acceptance criteria
+
 Task 3
 
 GitHub Social Features
