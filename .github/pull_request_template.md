@@ -8,6 +8,6 @@
 <!-- How did you verify it? -->
 
 ## Checklist
-- [ ] Title is a clear sentence (≤ 70 chars)
-- [ ] Commits are signed (`git log --show-signature`)
-- [ ] `submissions/labN.md` updated
+- [x] Title is a clear sentence (≤ 70 chars)
+- [x] Commits are signed (`git log --show-signature`)
+- [x] `submissions/labN.md` updated
