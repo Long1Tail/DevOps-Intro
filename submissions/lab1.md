@@ -1,4 +1,5 @@
 # Lab 1 submission
+```
 $ curl -s http://localhost:8080/notes  | python3 -m json.tool
 [
     {
@@ -70,8 +71,9 @@ $ curl -s http://localhost:8080/notes  | python3 -m json.tool
         "created_at": "2026-01-15T10:05:00Z"
     }
 ]
+```
 
-
+```
 commit e169036ff55d52b888e438a820bb2aedfccca916 (HEAD -> feature/lab1)
 Good "git" signature with ED25519 key SHA256:gTY1GYj4aG1biGVHoqKSQTCfhP9ShQv5lhTuCa2d/h8
 Unable to open allowed keys file "/home/long1tail/.ssh/allowed_signers": No such file or directory^M
@@ -83,6 +85,24 @@ Date:   Fri Jun 5 12:12:58 2026 +0300
     docs(lab1): start submission
     
     Signed-off-by: Long1TaiL <m.shulaev@innopolis.university>
-
+```
 
 ![image](image.png)
+
+Signed commits matter because they cryptographically verify the identity of the author. THerefore, it is much harder to impersonate a trusted maintainer. As z-utils backdoor (March 2024) shows, if attaker can sucsessfully ippersonate and get acsess to some utisl sorce code, it can compromise the whole internet onfratructure.
+
+GitHub Social Features
+
+Why Stars Matter:
+
+    Stars help you bookmark interesting projects for later reference
+    Star count indicates project popularity and community trust
+    Starred repos appear in your GitHub profile, showing your interests
+    Stars encourage maintainers and help projects gain visibility
+
+Why Following Matters:
+
+    See what other developers are working on
+    Discover new projects through their activity
+    Build professional connections beyond the classroom
+    Stay updated on classmates' work for future collaboration
