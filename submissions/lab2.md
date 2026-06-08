@@ -118,3 +118,57 @@ find .git/objects -type f | wc -l
 
 This command shows, how many git objects were found
 
+### 3
+
+```
+$ git reflog              
+14e9283 (HEAD -> feature/lab2) HEAD@{0}: reset: moving to 14e9283
+f6508f8 (origin/feature/lab2) HEAD@{1}: reset: moving to f6508f8
+aa8dd05 HEAD@{2}: reset: moving to aa8dd05
+f6508f8 (origin/feature/lab2) HEAD@{3}: reset: moving to f6508f8
+f6508f8 (origin/feature/lab2) HEAD@{4}: reset: moving to HEAD~2
+14e9283 (HEAD -> feature/lab2) HEAD@{5}: commit: wip(lab2): more progress
+aa8dd05 HEAD@{6}: commit: wip(lab2): start
+f6508f8 (origin/feature/lab2) HEAD@{7}: commit: docs(lab2): added 1.1, 1.2 tasks. Commit before execution of task 1.3
+7722946 HEAD@{8}: commit: docs(lab2): start submission
+e74f9ee (origin/main, origin/HEAD, main) HEAD@{9}: checkout: moving from main to feature/lab2
+e74f9ee (origin/main, origin/HEAD, main) HEAD@{10}: commit: docs(lab1): pull request template completed
+82d4bf6 HEAD@{11}: checkout: moving from feature/lab1 to main
+```
+
+```
+$ git reset --hard 14e9283
+Указатель HEAD сейчас на коммите 14e9283 wip(lab2): more progress
+```
+
+If `git gc` (garbage collector) were run before I restore my commits, information, stored in them would be lost and even git reset --hard <SHA> won't help
+
+## Task 2.
+
+Before:
+```
+git log --oneline --graph
+* f6508f8 (HEAD -> feature/lab2) docs(lab2): added 1.1, 1.2 tasks. Commit before execution of task 1.3
+* 7722946 docs(lab2): start submission
+* e74f9ee (tag: v0.1.0-lab2-long1tail, upstream/main, upstream/HEAD) docs(lab1): pull request template completed
+* 82d4bf6 test: unsigned commit (should fail)
+* 492d4ec docs: add PR template
+* 4b3d0b9 docs: add PR template
+* 66bbd4d docs(lab1): align Task 3 GitHub Community engagement with other courses
+```
+
+After:
+```
+git log --oneline --graph
+* c2aa5f9 (HEAD -> feature/lab2, origin/feature/lab2) docs(lab2): added 1.1, 1.2 tasks. Commit before execution of task 1.3
+* a066fde docs(lab2): start submission
+* 29bcd5e (origin/main, origin/HEAD, main) docs: upstream moved while you worked
+* e74f9ee (tag: v0.1.0-lab2-long1tail, upstream/main, upstream/HEAD) docs(lab1): pull request template completed
+* 82d4bf6 test: unsigned commit (should fail)
+* 492d4ec docs: add PR template
+* 4b3d0b9 docs: add PR template
+* 66bbd4d docs(lab1): align Task 3 GitHub Community engagement with other courses
+```
+
+Merge is good for public branches. It saves complex, non-linear history.
+Rebase creates clean, linear history and perfect for private branches
